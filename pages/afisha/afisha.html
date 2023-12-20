@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- ?? -->
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="./afisha.css">
+    <link rel="stylesheet" href="../../components/modal/modal.css">
+
+
+    <title>Главная</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- header -->
+        <header class="header">
+
+            <!-- logo -->
+            <div class="logo">
+                <a href="../../index.html">
+                    <img width="100px" height="100px" src="../../assets/logo.svg" alt="логотип" />
+                </a>
+            </div>
+
+            <!-- меню в шапке -->
+            <div class="nav">
+                <ul class="list nav_list">
+                    <li class="nav__item">
+                        <a href="../../index.html" class="link">главная</a>
+                    </li>
+                    <li class="nav__item">
+                    <a href="../afisha/afisha.html" class="link link__active">Афиша и билеты</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../news/news.html" class="link">новости</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../map/map.html" class="link">где нас найти?</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../about/about.html" class="link">о нас</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- личный кабинет вход -->
+            <div class="header__lk lk">
+                <a class="lk__link">
+                    <span>Личный кабинет</span>
+                </a>
+                <img width="36px" height="36px" src="../../assets/icons/user.svg" />
+            </div>
+
+        </header>
+
+        <section class="afisha">
+            <div class="afisha__top">
+                <h2 class="afisha__heading">
+                    Афиша и билеты
+                </h2>
+                <div class="afisha__img">
+                    <img src="../../assets/images/afisha/theatre.svg" alt="theatre">
+                </div>
+                <nav class="afisha__nav">
+                    <ul class="afisha__list">
+                        <li class="afisha__item">
+                            <a href="#" class="afisha__link">Вся афиша</a>
+                        </li>
+                        <li class="afisha__item">
+                            <a href="#" class="afisha__link">Опера</a>
+                        </li>
+                        <li class="afisha__item">
+                            <a href="#" class="afisha__link">Балет</a>
+                        </li>
+                        <li class="afisha__item">
+                            <a href="#" class="afisha__link">Концерты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="afisha__bottom search-afisha">
+
+                <!-- найти спекталь поиск -->
+                <div class="search-afisha__item search-input ">
+                    <input class="input-search" type="text" placeholder="НАЙТИ СПЕКТАЛЬ ИЛИ КОНЦЕРТ">
+                </div>
+
+
+                <!-- выбор жанра -->
+                <select class="search-afisha__item">
+                    <option value="1">ЖАНРЫ</option>
+                    <option value="2">ДРАМА</option>
+                    <option value="3">КОМЕДИЯ</option>
+                    <option value="3">ТРАГЕДИЯ</option>
+                </select>
+
+
+                <!-- datapicker -->
+                <div class="search-afisha__item">
+                    <label id="datapickerLabel" onClick="showDataInput()" for="date">
+                        <img width="20px" src="../../assets/icons/afisha/calendar.svg" alt="">
+                        ВСЕ ДАТЫ
+                    </label>
+                    <input class='none' type="date" name="date" id="date">
+                </div>
+
+
+                <div class="search-afisha__item">
+                    <select class="">
+                        <option value="1">ВСЕ СЦЕНЫ</option>
+                        <option value="2">ТЕАТР ТЕАТР</option>
+                        <option value="3">ТЕАТР ОПЕРЫ И БАЛЕТА</option>
+                        <option value="3">ТЮЗ</option>
+                    </select>
+                </div>
+
+
+                <div class="search-afisha__item">
+                    <a class="search-afisha__link" target="_blank" href="#tickets">
+                        ДОСТУПНЫЕ БИЛЕТЫ НА САЙТЕ
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="tickets" id="tickets">
+            <!--  1карточка билета -->
+            <div class="ticket__card card">
+                <div class="card__date date-card">
+                    <div class="date-card__heading">22 ДЕКАБРЯ</div>
+                    <div class="date-card__day">ВТОРНИК</div>
+                </div>
+
+                <div class="card__body body-card">
+                    <div class="body-card__top top-body-card">
+                        <div class="top-body-card__description">
+                            <div class="top-body-card__sup-text">ОПЕРА В ДВУХ ДЕЙСТВИЯХ</div>
+                            <div class="myBtn_multi pouring top-body-card__name">ВЕЛИКАЯ ДРУЖБА</div>
+                            <div class="top-body-card__sub-text">ГАСТРОЛИ БУРЯТСКОГО ГОСУДАРСТВЕННОГО АКАДЕМИЧЕСКОГО
+                                ТЕАТРА ОПЕРЫ И БАЛЕТА</div>
+                        </div>
+                        <div class="top-body-card__time">
+                            <div class="top-body-card__age">12+</div>
+                            <div class="top-body-card__begin">19:00</div>
+                        </div>
+                    </div>
+                    <hr class="card__inside-delimiter" />
+                    <div class="body-card__bottom bottom-body-card">
+                        <div class="bottom-body-card__scene">
+                            <img src="../../assets/icons/all-tickets/sofa.png" alt="scene">
+                            <div class="bottom-body-card__scene-text">Новая сцена</div>
+                        </div>
+
+                        <button class="btn btn__hero">
+                            <a href="../cart/cart.html">
+                                КУПИТЬ БИЛЕТ
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <hr class="card__delimiter" />
+            
+
+            <!--  2 карточка билета -->
+            <div class="ticket__card card">
+                <div class="card__date date-card">
+                    <div class="date-card__heading">23 ДЕКАБРЯ</div>
+                    <div class="date-card__day">СРЕДА</div>
+                </div>
+
+                <div class="card__body body-card">
+                    <div class="body-card__top top-body-card">
+                        <div class="top-body-card__description">
+                            <div class="top-body-card__sup-text">
+                                ОПЕРА В ДВУХ ДЕЙСТВИЯХ
+                            </div>
+                            <div class="myBtn_multi pouring top-body-card__name">ИОЛАНТА</div>
+                            <div class="top-body-card__sub-text">
+                                В СПЕКТАКЛЕ ИСПОЛНЯЕТСЯ СИМФОНИЧЕСКАЯ СЮИТА “ЩЕЛКУНЧИК”
+                            </div>
+                        </div>
+                        <div class="top-body-card__time">
+                            <div class="top-body-card__age">12+</div>
+                            <div class="top-body-card__begin">19:00</div>
+                        </div>
+                    </div>
+                    <hr class="card__inside-delimiter" />
+                    <div class="body-card__bottom bottom-body-card">
+                        <div class="bottom-body-card__scene">
+                            <img src="../../assets/icons/all-tickets/sofa.png" alt="scene">
+                            <div class="bottom-body-card__scene-text">Новая сцена</div>
+                        </div>
+
+                        <button class="btn btn__hero">
+                            <a href="../cart/cart.html">
+                                КУПИТЬ БИЛЕТ
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <hr class="card__delimiter" />
+            
+
+            <!--  3 карточка билета -->
+            <div class="ticket__card card">
+                <div class="card__date date-card">
+                    <div class="date-card__heading">23 ДЕКАБРЯ</div>
+                    <div class="date-card__day">СРЕДА</div>
+                </div>
+
+                <div class="card__body body-card">
+                    <div class="body-card__top top-body-card">
+                        <div class="top-body-card__description">
+                            <div class="top-body-card__sup-text">
+                                БАЛЕТ В ДВУХ ДЕЙСТВИЯХ
+                            </div>
+                            <div class="myBtn_multi pouring top-body-card__name">ПИКОВАЯ ДАМА</div>
+                            <div class="top-body-card__sub-text">
+                                ПРЕМЬЕРА
+                            </div>
+                        </div>
+                        <div class="top-body-card__time">
+                            <div class="top-body-card__age">12+</div>
+                            <div class="top-body-card__begin">19:00</div>
+                        </div>
+                    </div>
+                    <hr class="card__inside-delimiter" />
+                    <div class="body-card__bottom bottom-body-card">
+                        <div class="bottom-body-card__scene">
+                            <img src="../../assets/icons/all-tickets/sofa.png" alt="scene">
+                            <div class="bottom-body-card__scene-text">ТЕАТР ТЕАТР</div>
+                        </div>
+
+                        <button class="btn btn__hero">
+                            <a href="../cart/cart.html">
+                                КУПИТЬ БИЛЕТ
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <hr class="card__delimiter" />
+            
+
+        </section>
+
+        <!-- модалка -->
+
+        <!-- The Modal 1-->
+        <div class="modal modal_multi">
+            <!-- Modal 1 content -->
+            <div class="modal-content">
+                <span class="close__modal close_multi">×</span>
+                <div class="modal__title">Великая дружба</div>
+                <div class="modal__text">
+                    13 сентября 2023 года в Бурятском театре оперы и балета состоялись премьерные показы оперы Вано
+                    Мурадели «Великая Дружба» — той самой многострадальной оперы, появление которой на главной сцене
+                    страны было встречено жесткой критикой со стороны партийных органов и спровоцировало кампанию по
+                    борьбе с формализмом в музыке. Идейным вдохновителем и дирижером-постановщиком оперы стал
+                    художественный руководитель театра Владимир Рылов.
+                </div>
+                <div class="modal__img">
+                    <img src="../../assets/images/afisha/friendship.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- The Modal 2-->
+        <div class="modal modal_multi">
+            <!-- Modal 1 content -->
+            <div class="modal-content">
+                <span class="close__modal close_multi">×</span>
+                <div class="modal__title">Иоланта</div>
+                <div class="modal__text">
+                    Последняя опера Чайковского, «Иоланта» впервые увидела свет рампы за год до смерти композитора, в
+                    1892-м. Задумывалась она как часть смешанного представления, которое делила с двухактным балетом
+                    «Щелкунчик». Музыкальное родство обеих партитур несомненно, но сегодня «Иоланта» и «Щелкунчик» чаще
+                    существуют на театральных подмостках порознь.
+                    Очарование и популярность сольных номеров, малая форма и сказочный сюжет со счастливым концом
+                    сделали «Иоланту» удобным материалом для выпускных работ консерваторцев и привлекательным
+                    репертуарным названием для отечественной публики. Однако за фасадом благообразной сказки можно
+                    разглядеть символистскую драму. Герои много рассуждают, но внешнего действия почти нет, в их речах
+                    угадываются скрытые смыслы, в центре истории – героиня, лишенная зрения, которой, «чтобы знать красу
+                    вселенной», не нужен свет.
+                </div>
+                <div class="modal__img">
+                    <img src="../../assets/images/afisha/iolanta.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- The Modal 3-->
+        <div class="modal modal_multi">
+            <!-- Modal 3 content -->
+            <div class="modal-content">
+                <span class="close__modal close_multi">×</span>
+                <div class="modal__title">Пиковая дама</div>
+                <div class="modal__text">
+                    В мистической повести «Пиковая дама» А. С. Пушкин затронул глубокие философские проблемы, которые и
+                    сегодня очень актуальны. В спектакле Театра Моссовета по одноименной повести соединяются размышления
+                    о природе человеческой натуры с темой непредсказуемости судьбы, неотвратимости рока, определяющего
+                    жизнь человека
+                    Образ Старой графини – «Пиковой дамы» — смысловой и художественный стержень спектакля. Ведь именно в
+                    столкновение с ней, предлагающей Германну в обмен на секрет трех карт любовь и семейное счастье с ее
+                    воспитанницей, раскрываются темные бездны погибающей души ослепленного азартом игрока, сделавшего
+                    свой выбор.
+                    В спектакле сочетаются серьезные размышления о человеческом несовершенстве и сожаление о
+                    несостоявшейся любви, которая могла бы изменить судьбы героев.
+                    Образ Петербурга, на фоне которого разворачиваются все события, является одной из составляющих
+                    спектакля, полного музыки, романсов, танцев, создающих исторический контекст действия.
+                </div>
+                <div class="modal__img">
+                    <img src="../../assets/images/afisha/dama.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+
+
+        <footer class="footer">
+            <div class="footer__container container">
+
+                <!-- первая колонка - контакты -->
+                <div class="footer__col footer__contacts contacts">
+                    <div class="contacts__str">
+                        <span class="contacts__title">Адрес</span>
+                        <span class="contacts__text">г. Пермь ул. Пушкина, 107</span>
+                    </div>
+                    <div class="contacts__str">
+                        <span class="contacts__title">Телефон</span>
+                        <span class="contacts__text">8(960)333-88-33</span>
+                    </div>
+                    <div class="contacts__str">
+                        <span class="contacts__title">Электронная почта</span>
+                        <span class="contacts__text">inf0@theater.ru</span>
+                    </div>
+                    <div class="contacts__str">
+                        <span class="contacts__title">График работы</span>
+                        <span class="contacts__text">ЕЖЕДНЕВНО с 9:00 - 22.00</span>
+                    </div>
+                </div>
+
+                <!-- футер вторая колонка -->
+                <div class="footer__col footer__col_right">
+                    <!-- футер карта -->
+                    <div class=" footer__map">
+                        <!-- <img src="./assets/images/footer/map.png" alt="footer-map"> -->
+
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?ll=56.227424%2C58.004138&mode=poi&poi%5Bpoint%5D=56.221126%2C58.002848&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1064300558&z=16.58"
+                            width="100%" height="100%" frameborder="0" allowfullscreen="true"
+                            style="position:relative;">
+                        </iframe>
+
+
+                    </div>
+
+                    <!-- футер соцсети -->
+                    <div class=" footer__socials socials white">
+                        <div class="socials__text">Соц сети</div>
+                        <div class="socials__list">
+                            <a href="https://vk.com/">
+                                <img src="../../assets/icons/socials/vk.svg" alt="вконтакте">
+                            </a>
+                            <a href="https://web.telegram.org">
+                                <img src="../../assets/icons/socials/telegram.svg" alt="телеграм">
+                            </a>
+                            <a href="https://www.whatsapp.com/?lang=ru_RU">
+                                <img src="../../assets/icons/socials/wtsapp.svg" alt="вотсап">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script defer src="../../scripts/calendar.js"></script>>
+    <script defer src="../../scripts/modal.js"></script>
+    <script defer src="../../scripts/auth.js"></script>
+
+</body>
+
+</html>

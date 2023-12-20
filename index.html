@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <title>Главная</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- header -->
+        <header class="header">
+
+            <!-- logo -->
+            <div class="logo">
+                <a href="./index.html">
+                    <img width="100px" height="100px" src="./assets/logo.svg" alt="логотип" />
+                </a>
+            </div>
+
+            <!-- меню в шапке -->
+            <div class="nav">
+                <ul class="list nav_list">
+                    <li class="nav__item">
+                        <a href="#" class="link link__active">главная</a>
+                    </li>
+                    <li class="nav__item">
+                    <a href="./pages/afisha/afisha.html" class="link">Афиша и билеты</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./pages/news/news.html" class="link">новости</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./pages/map/map.html" class="link">где нас найти?</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./pages/about/about.html" class="link">о нас</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- личный кабинет вход -->
+            <div class="header__lk lk">
+                <!-- href="./pages/lk/lk.html"  -->
+                <a 
+                class="lk__link">
+                    <span>Личный кабинет</span>
+                </a>
+                <img width="36px" height="36px" src="./assets/icons/user.svg" />
+
+            </div>
+
+        </header>
+
+        <!-- баннер -->
+        <section class="hero">
+            <div class="container hero__container">
+
+                <div class="hero__body">
+                    <h2 class="heading ">
+                        За мостом
+                    </h2>
+                    <div class="simple__text">
+                        Добро пожаловать в наш театр! Мы являемся официальным сайтом спектаклей, где можно найти
+                        актуальное расписание, купить билеты на предстоящие мероприятия и получить последние новости.
+                    </div>
+                    <button class="btn btn__hero">
+                        <a href="./pages/afisha/afisha.html">Купить билеты</a>
+                    </button>
+                </div>
+
+                <div class="hero__image">
+                    <img src="./assets//images/hero.png" alt="Изображение театра">
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- секция каталог спектаклей -->
+        <section class="section catalog">
+            <div class="container catalog__container ">
+                <div class=" heading">Каталог спектаклей</div>
+                <div class="simple__text ">В нашем каталоге представлены лучшие постановки
+                    различных
+                    жанров. От пьес и
+                    комедий до опер и балетов, у нас есть что-то для каждого любителя театра.</div>
+                <!-- <div class="catalog__list"> -->
+
+                <div class="swiper-container catalog__list">
+                    <div class="swiper-wrapper">
+
+                        <!-- слайд1    -->
+                        <div class="swiper-slide" style="background-image:url(./assets/images/catalog/drama.png)">
+                            <a href="./pages/afisha/afisha.html">
+
+                                <div class="swiper-content">
+                                    <p class="swiper-title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">
+
+                                    <div class="catalog__card-name">
+                                        Драма
+                                    </div>
+
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <!-- слайд2    -->
+                        <div class="swiper-slide" style="background-image:url(./assets/images/catalog/comedy.png)">
+                            <a href="./pages/afisha/afisha.html">
+
+                                <div class="swiper-content">
+                                    <p class="swiper-title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">
+
+                                    <div class="catalog__card-name">
+                                        Комедия
+                                    </div>
+
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- слайд3    -->
+                        <div class="swiper-slide" style="background-image:url(./assets/images/catalog/opera.png)">
+                            <a href="./pages/afisha/afisha.html">
+
+                                <div class="swiper-content">
+                                    <p class="swiper-title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">
+
+                                    <div class="catalog__card-name">
+                                        Опера
+                                    </div>
+
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <!-- слайд4    -->
+                        <div class="swiper-slide"
+                            style="background-image:url(./assets/images/catalog/tragycomedy.jpeg)">
+                            <a href="./pages/afisha/afisha.html">
+
+                                <div class="swiper-content">
+                                    <p class="swiper-title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">
+
+                                    <div class="catalog__card-name">
+                                        Трагикомедия
+                                    </div>
+
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- секция  "покупка билетов" (преимущества) -->
+        <section class="section adventages">
+            <div class="container adventages__container">
+                <div class="heading">Покупка билетов</div>
+                <div class="simple__text">
+                    Теперь вы можете приобретать билеты онлайн, без посещения кассы театра. Удобно, быстро и
+                    безопасно.
+                    Выбирайте место и дату, оплата защищена и осуществляется незаметно. Наслаждайтесь
+                    спектаклем,
+                    который будет очень запоминающимся.
+                </div>
+                <div class="adventages__cards">
+                    <!-- карточка преимуществ -->
+                    <div class="adventages__card">
+                        <div class="adventages__card-title">
+                            Большой выбор мест
+                        </div>
+                        <div class="adventages__card-text">
+                            Мы гарантируем обширный выбор мест и предлагаем самые оптимальные цены.
+                        </div>
+                        <!-- разделительная линия -->
+                        <div class="delimiter">
+                            <!-- &#128313;<hr />&#128313; -->
+                            <hr />
+                        </div>
+                        <div class="adventages__card-title text-right">
+                            Никаких очередей
+                        </div>
+                        <div class="adventages__card-text text-right">
+                            Покупка билетов онлайн позволяет избежать необходимости стоять в длинных очередях и
+                            позволяет более эффективно планировать свое время.
+                        </div>
+                    </div>
+
+                    <!-- 2 карточка преимуществ -->
+                    <div class="adventages__card">
+                        <div class="adventages__card-title">
+                            Безопасность
+                        </div>
+                        <div class="adventages__card-text">
+                            Безопасность
+                            Для потребителей, которые предпочитают комфорт и безопасность наш сайт позволяет
+                            полностью
+                            управлять своими финансами.
+                        </div>
+                        <!-- разделительная линия -->
+                        <hr />
+                        <div class="adventages__card-title text-right">
+                            Легкий процесс
+                        </div>
+                        <div class="adventages__card-text text-right">
+                            Процесс покупки билета занимает всего несколько минут. Вбиваете информацию,
+                            выбираете место
+                            и получаете билеты на почту.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="footer">
+            <div class="footer__container container">
+
+                <!-- первая колонка - контакты -->
+                <div class="footer__col footer__contacts contacts">
+                    <div class="contacts__str">
+                        <span class="contacts__title">Адрес</span>
+                        <span class="contacts__text">г. Пермь ул. Пушкина, 107</span>
+                    </div>
+                    <div class="contacts__str">
+                        <span class="contacts__title">Телефон</span>
+                        <span class="contacts__text">8(960)333-88-33</span>
+                    </div>
+                    <div class="contacts__str">
+                        <span class="contacts__title">Электронная почта</span>
+                        <span class="contacts__text">inf0@theater.ru</span>
+                    </div>
+                    <div class="contacts__str">
+                        <span class="contacts__title">График работы</span>
+                        <span class="contacts__text">ЕЖЕДНЕВНО с 9:00 - 22.00</span>
+                    </div>
+                </div>
+
+                <!-- футер вторая колонка -->
+                <div class="footer__col footer__col_right">
+                    <!-- футер карта -->
+                    <div class=" footer__map">
+                        <!-- <img src="./assets/images/footer/map.png" alt="footer-map"> -->
+
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?ll=56.227424%2C58.004138&mode=poi&poi%5Bpoint%5D=56.221126%2C58.002848&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1064300558&z=16.58"
+                            width="100%" height="100%" frameborder="0" allowfullscreen="true"
+                            style="position:relative;">
+                        </iframe>
+
+
+                    </div>
+
+                    <!-- футер соцсети -->
+                    <div class=" footer__socials socials white">
+                        <div class="socials__text">Соц сети</div>
+                        <div class="socials__list">
+                            <a href="https://vk.com/">
+                                <img src="./assets/icons/socials/vk.svg" alt="вконтакте">
+                            </a>
+                            <a href="https://web.telegram.org">
+                                <img src="./assets/icons/socials/telegram.svg" alt="телеграм">
+                            </a>
+                            <a href="https://www.whatsapp.com/?lang=ru_RU">
+                                <img src="./assets/icons/socials/wtsapp.svg" alt="вотсап">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script defer src="./scripts/slider.js"></script>
+    <script defer src="./scripts/auth.js"></script>
+</body>
+
+</html>

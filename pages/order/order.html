@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- ?? -->
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="./order.css">
+    <link rel="stylesheet" href="../../components/modal/modal.css">
+
+    <title>Главная</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- header -->
+        <header class="header">
+
+            <!-- logo -->
+            <div class="logo">
+                <a href="../../index.html">
+                    <img width="100px" height="100px" src="../../assets/logo.svg" alt="логотип" />
+                </a>
+            </div>
+
+            <!-- меню в шапке -->
+            <div class="nav">
+                <ul class="list nav_list">
+                    <li class="nav__item">
+                        <a href="../../index.html" class="link">главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../afisha/afisha.html" class="link">Афиша и билеты</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../news/news.html" class="link">новости</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../map/map.html" class="link">где нас найти?</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../about/about.html" class="link">о нас</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- личный кабинет вход -->
+            <div class="header__lk lk">
+                <a  class="lk__link link__active">
+                    <span>Личный кабинет</span>
+                </a>
+                <img width="36px" height="36px" src="../../assets/icons/user.svg" />
+            </div>
+
+        </header>
+
+        <section class="order">
+            <h3 class="order__heading">ОФОРМЛЕНИЕ ЗАКАЗА</h3>
+
+            <div class="order__body">
+
+                <div class="order__col order__col_1">
+
+                    <!-- получатель -->
+                    <div class="order__client">
+                        <div class="client__text">Получатель: Иванов Иван</div>
+                        <div class="client__text">Номер: 89990009991</div>
+
+                    </div>
+
+                    <!-- инфо о спектакле -->
+                    <div class="order__event">
+                        <div class="event__1row">
+                            <div class="name">ВЕЛИКАЯ ДРУЖБА</div>
+                            <div class="count">
+                                <button class="btn count_btn">+</button>
+                                1
+                                <button class="btn count_btn">-</button>
+                            </div>
+                        </div>
+                        <div class="event__2row">
+                            <div class="date">13 ДЕКАБРЯ в 19:00</div>
+                            <div class="price">1790 P/шт</div>
+                        </div>
+                    </div>
+
+                    <!-- карта -->
+                    <div class="order__payment payment">
+                        <div class="payment__choise">СПОСОБ ОПЛАТЫ</div>
+                        <div class="payment__card">
+                            <label for="">ВВЕДИТЕ ДАННЫЕ ДЛЯ ОПЛАТЫ</label>
+                            <input onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text"
+                                maxlength="16" placeholder="2200 2460 4455 6677">
+                            <div class="payment__data">
+                                <input onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text"
+                                    maxlength="4" class="payment__year" placeholder="00/00">
+                                <input maxlength="3" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                                    type="text" class="payment__code" placeholder="000">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="order__col order__col_2">
+
+                    <div class="order__total-badge badge-total">
+                        <div class="badge-total__text">Товаров 1 на сумму</div>
+                        <div class="badge-total__text">1790 Р</div>
+                    </div>
+
+                    <div class="order__amount amount-order">
+                        <div class="amount-order__text">Итоговая стоимость</div>
+                        <div class="amount-order__text">1790 Р</div>
+                    </div>
+
+                    <button class="myBtn_multi btn btn_order">
+                        <!-- <a href="../../index.html"> -->
+                        <span>ОПЛАТИТЬ</span>
+                        <!-- </a> -->
+                    </button>
+
+                    <!-- промокод -->
+                    <div class="order__input order__input_promo">
+                        <label id="promo-label" onClick="showDataInput('promo')" for="promo">
+                            ПРОМОКОД
+                        </label>
+                        <input class='none' placeholder="ПРОМОКОД" type="text" name="promo" id="promo-input">
+                    </div>
+                    <!-- сертификат -->
+
+                    <div class="order__input order__input_cert">
+                        <label id="cert-label" onClick="showDataInput('cert')" for="cert-input">
+                            СЕРТИФИКАТ
+                        </label>
+                        <input class='none' placeholder="СЕРТИФИКАТ" type="text" name="cert" id="cert-input">
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- модалка -->
+
+        <!-- The Modal 1-->
+        <div class="modal modal_multi">
+            <!-- Modal 1 content -->
+            <div class="modal-content">
+                <span class="close__modal close_multi">×</span>
+                <div class="modal__title">Заказ оплачен</div>
+                <div class="modal__text center">Ваш заказ:</div>
+                <div class="modal__title">билет на спектакль ВЕЛИКАЯ ДРУЖБА</div>
+                <div class="modal__text center">время события:</div>
+                <div class="modal__title">13 ДЕКАБРЯ в 19:00</div>
+                <div class="modal__text center">ряд последний, нижняя полка, у туалета</div>
+                <div class="modal__img">
+                    <img src="../../assets/images/afisha/friendship.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer__container container">
+
+                <!-- первая колонка - контакты -->
+                <div class="footer__col footer__contacts contacts">
+                    <div class="contacts__str">
+                        <span class="contacts__title">Адрес</span>
+                        <span class="contacts__text">г. Пермь ул. Пушкина, 107</span>
+                    </div>
+                    <div class="contacts__str">
+                        <span class="contacts__title">Телефон</span>
+                        <span class="contacts__text">8(960)333-88-33</span>
+                    </div>
+                    <div class="contacts__str">
+                        <span class="contacts__title">Электронная почта</span>
+                        <span class="contacts__text">inf0@theater.ru</span>
+                    </div>
+                    <div class="contacts__str">
+                        <span class="contacts__title">График работы</span>
+                        <span class="contacts__text">ЕЖЕДНЕВНО с 9:00 - 22.00</span>
+                    </div>
+                </div>
+
+                <!-- футер вторая колонка -->
+                <div class="footer__col footer__col_right">
+                    <!-- футер карта -->
+                    <div class=" footer__map">
+                        <!-- <img src="./assets/images/footer/map.png" alt="footer-map"> -->
+
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?ll=56.227424%2C58.004138&mode=poi&poi%5Bpoint%5D=56.221126%2C58.002848&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1064300558&z=16.58"
+                            width="100%" height="100%" frameborder="0" allowfullscreen="true"
+                            style="position:relative;">
+                        </iframe>
+
+
+                    </div>
+
+                    <!-- футер соцсети -->
+                    <div class=" footer__socials socials white">
+                        <div class="socials__text">Соц сети</div>
+                        <div class="socials__list">
+                            <a href="https://vk.com/">
+                                <img src="../../assets/icons/socials/vk.svg" alt="вконтакте">
+                            </a>
+                            <a href="https://web.telegram.org">
+                                <img src="../../assets/icons/socials/telegram.svg" alt="телеграм">
+                            </a>
+                            <a href="https://www.whatsapp.com/?lang=ru_RU">
+                                <img src="../../assets/icons/socials/wtsapp.svg" alt="вотсап">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // промокод и сертификат
+        function showDataInput() {
+            const dateInput = document.querySelector('#date')
+            dateInput.classList.remove('none')
+            const dateLabel = document.querySelector('#datapickerLabel')
+            dateLabel.classList.add('none')
+        }
+
+        function showDataInput(str) {
+            const label = document.querySelector(`#${str}-label`)
+            label.classList.add('none')
+            const input = document.querySelector(`#${str}-input`)
+            input.classList.remove('none')
+        }
+    </script>
+    <script defer src="../../scripts/modal.js"></script>
+    <script defer src="../../scripts/auth.js"></script>
+
+</body>
+
+</html>

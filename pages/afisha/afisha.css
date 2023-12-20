@@ -1,0 +1,464 @@
+.afisha {
+    flex-grow: 1;
+    display: flex;
+
+    flex-direction: column;
+}
+
+.afisha__top {
+    padding-top: 2rem;
+
+    background-color: #858C9D;
+    width: 100%;
+    min-height: 100%;
+}
+
+.afisha__heading {
+    font-family: Inter;
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 1rem;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .afisha__heading {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .afisha__heading {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .afisha__heading {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 475px) {
+    .afisha__heading {
+        font-size: 2rem;
+    }
+}
+
+
+.afisha__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.afisha__img img {
+    max-width: 30%;
+}
+
+.afisha__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+
+    text-transform: uppercase;
+
+    font-family: Inter;
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 37px;
+    letter-spacing: 0.07em;
+    text-align: left;
+}
+
+@media (max-width: 787px) {
+    .afisha__list {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .afisha__list {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .afisha__list {
+        flex-direction: column;
+        font-size: 1.5rem;
+
+    }
+}
+
+
+.afisha__bottom {
+    background-color: #323945;
+}
+
+.search-afisha {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+}
+
+.search-afisha__item {
+    border: 1px solid #000;
+    border-bottom: 0;
+
+    padding: 5px;
+
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.07em;
+    text-align: left;
+
+    color: #fff;
+
+    flex-grow: 1;
+}
+
+
+
+
+.search-afisha__item:first-of-type {}
+
+.search-afisha__item:nth-of-type(2) {}
+
+.search-afisha__item:last-of-type {}
+
+
+/* поиск билетов */
+.input-search {
+    border: none;
+    line-height: 1.5;
+    background: #323945;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path fill='%238C92A0' d='M11.44 10.73l4.41 4.42a.5.5 0 1 1-.7.7l-4.42-4.41a6.5 6.5 0 1 1 .7-.7v-.01zM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11z'></path></svg>");
+    background-repeat: no-repeat;
+    background-position: 15px 10px;
+    background-size: 15px 15px;
+    /* min-width: 100%; */
+    padding: .5em 1em .5em 3em;
+}
+
+.input-search::placeholder {
+    color: #fff;
+}
+
+.input-search:focus {
+    outline: none;
+    border: none;
+    background-color: #858C9D;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+}
+
+/* выбор жанра  */
+select {
+    /* appearance: none; */
+    border: 0;
+    outline: 0;
+    background: none;
+    color: #fff;
+    box-shadow: none;
+    width: 100%;
+}
+
+select option {
+    color: #fff;
+    background-color: #323945;
+}
+
+
+
+
+
+/* ---------------------------------------------------- */
+/* выбор даты */
+
+[type="date"] {
+    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+/* custom styles */
+label {
+    display: block;
+}
+
+input {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: center;
+}
+
+
+
+
+
+/* раздел все билеты */
+.tickets {
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket__card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* justify-content: space-between; */
+    gap: 20px;
+
+    margin: 20px;
+}
+
+@media (max-width:500px) {
+    .ticket__card {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+
+.card__date {
+    flex: 40%;
+}
+
+@media (max-width: 475px) {
+    .card__date {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .card__date {
+        flex: 1;
+    }
+}
+
+.date-card__heading {
+    font-family: Inter;
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 2.5rem;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+@media (max-width: 850px) {
+    .date-card__heading {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+.date-card__day {
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.07em;
+    text-align: left;
+
+}
+
+@media (max-width: 850px) {
+    .date-card__day {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.top-body-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:750px) {
+    .top-body-card {
+        flex-direction: column;
+    }
+}
+
+.top-body-card__description {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-body-card__sup-text {
+    font-family: Inter;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.07em;
+    text-align: left;
+}
+
+
+@media (max-width: 850px) {
+    .top-body-card__sup-text {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
+
+.top-body-card__name {
+    font-family: Inter;
+    font-size: 3.5rem;
+    font-style: italic;
+    font-weight: 200;
+    line-height: 4rem;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+@media (max-width: 850px) {
+    .top-body-card__name {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+}
+
+.top-body-card__sub-text {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: 0.07em;
+    text-align: left;
+
+}
+
+@media (max-width: 850px) {
+    .top-body-card__sub-text {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+}
+
+.top-body-card__time {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width:750px) {
+    .top-body-card__time {
+        margin-top: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+
+.top-body-card__age {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.07em;
+    text-align: right;
+}
+
+@media (max-width:750px) {
+    .top-body-card__age {
+        text-align: start;
+    }
+}
+
+
+
+.top-body-card__begin {
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.07em;
+    text-align: right;
+}
+
+.body-card__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 400px) {
+    .body-card__bottom {
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        ;
+    }
+}
+
+.bottom-body-card__scene {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.bottom-body-card__scene-text {
+    font-family: Inter;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1 rem;
+    letter-spacing: 0.07em;
+    text-align: left;
+
+    text-transform: uppercase;
+
+}
+
+.btn__hero {
+    margin-top: 0;
+    margin-right: 20px;
+}
+
+@media (max-width: 400px) {
+    .btn__hero {
+        margin-right: 0;
+    }
+}
+
+.card__inside-delimiter {
+    width: 50%;
+    color: #000;
+}
+
+.card__delimiter {
+    width: 100%;
+    color: #000;
+}
